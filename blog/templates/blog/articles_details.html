@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+ 
+{% block title %}
+{{post.title}} | Broadside
+{% endblock %}
+
+
+{% block content %}
+<h1>{{post.title}}</h1>
+<small>By: {{post.author}}</small>
+<hr>
+
+<br><br>
+{{post.body}}
+
+<br><br><br>
+<br>
+
+<a href="{% url 'home' %}" class="btn btn-secondary">Back to Home</a>
+
+{% endblock  %}
