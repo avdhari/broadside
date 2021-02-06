@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Delete Post | Broadside{% endblock %}
+
+
+{% block content %}
+
+<h1>DeletePost!</h1>
+<br><br>
+<div class="'form-group">
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <strong>Are you sure?</strong>
+        <br><br>
+        <button class="btn btn-success">Delete </button>        
+        <a href="{% url 'article-detail' post.pk %}" class="btn btn-danger">Cancel</a>
+
+    </form>
+
+</div>
+{% endblock %}
